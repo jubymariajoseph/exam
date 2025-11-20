@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            POINT PREDICTION
+        </title>
+    </head>
+    <body>
+        <h2>Enter values</h2>
+        <form method="POST">
+            <label>Place</label>
+            <input name="Place" type="number" ><br>
+            <label>Song_Quality</label>
+            <input name="Song_Quality" type="number" value="{{Song_QualiTY}}"><br>
+            <label>Energy</label>
+            <input name="energy" value = '{{energy}}'><br>
+            <label>Danceability</label>
+            <input name="danceability" type="number" value ="{{danceability}}"><br>
+            <label>Semi_Final_number</label>
+            <input name="Semi_Final_number" type="number" value = "{{Semi_Final_number}}"><br>
+            <label>Song_In_English</label>
+            <input name="Song_In_English" type="number" value = "{{Song_In_English}}"><br>
+            <label>Song Duration</label>
+            <input name="duration" type="number" value="{{duration}}"><br>
+      <button type="submit">Predict</button>
+    </form>
+    {% if prediction is defined and prediction is not none %}
+      <div class="result">
+        <strong>Prediction:</strong> {{ prediction }}
+      </div>
+    {% endif %}
+   
+    </body>
+</html>
